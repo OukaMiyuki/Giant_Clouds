@@ -37,6 +37,9 @@ public class Player : MonoBehaviour{
             {
                 forceX = speed;
                 anim.SetBool("Walk", true);
+                Vector3 temp = transform.localScale;
+                temp.x = 1.3f;
+                transform.localScale = temp;
             }
         }
         else if (input < 0)
@@ -45,6 +48,9 @@ public class Player : MonoBehaviour{
             {
                 forceX = -speed;
                 anim.SetBool("Walk", true);
+                Vector3 temp = transform.localScale;
+                temp.x = -1.3f;
+                transform.localScale = temp;
             }
         }
         else { //if player don't move
